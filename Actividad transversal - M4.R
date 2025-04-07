@@ -93,3 +93,15 @@ barplot(salarios_sin_duplicados$Salario,
         ylab = "Salario",
         col = "pink",
         las = 2)
+
+
+#histograma con ggplot2
+# Se cargan las librerías necesarias
+library(dplyr)
+library(ggplot2)
+library(readr)
+
+ggplot(salarios_sin_duplicados, aes(x = Edad, y = Salario)) + 
+  geom_line(color = "yellow") +
+  labs(title = "Grafico de salario por edad") +
+  theme_dark()
